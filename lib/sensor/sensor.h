@@ -9,10 +9,10 @@ struct reg_info
 
 struct sensor 
 {
-	char name[32];
-	int (*kill)(char[32]);
-	unsigned short (*min_read_delay)(void);
-	float* (*read)(void);
+	char name[32];                          //name or sensor
+	int (*kill)(char[32]);                  //function to kill sensor
+	unsigned short (*min_read_delay)(void); //delay between sensor reads
+	float* (*read)(void);                   //sensor reading value(s)
 };
 
 inline struct reg_info* reg_dev(struct sensor* dev, int *status)
@@ -22,4 +22,9 @@ inline struct reg_info* reg_dev(struct sensor* dev, int *status)
 	ri->s = dev; 
 	*(status) = (int)REG_SUC;
 	return ri;
+}
+
+inlive struct void unreg_dev(struct *reg_info ri)
+{
+
 } 
