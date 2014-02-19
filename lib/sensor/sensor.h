@@ -67,3 +67,5 @@ static ssize_t sensor_read(struct file *file, char *buffer, size_t length, loff_
 	put_user(*(results), buffer);	
 	return sizeof(*results);
 }
+
+EXPORT_SYMBOL(reg_dev);
