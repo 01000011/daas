@@ -24,7 +24,7 @@ inline struct reg_info* reg_dev(struct sensor* dev, int *status)
 	return ri;
 }
 
-inlive struct void unreg_dev(struct *reg_info ri)
+inline struct void unreg_dev(struct *reg_info ri)
 {
 
 } 
