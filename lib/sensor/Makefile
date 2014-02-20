@@ -1,1 +1,2 @@
-obj-m += tmp_sensor.o
+obj-m += sensor_manager.o
+obj-m += temperature_sensor.o
